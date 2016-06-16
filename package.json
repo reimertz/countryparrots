@@ -1,0 +1,17 @@
+{
+  "name": "country-parrots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-gifs": "rm -rf parrots/;mkdir parrots; node generateParrots.js",
+    "generate-index": "node generateIndex.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "archiver": "^1.0.0",
+    "canvas": "^1.3.16",
+    "gifencoder": "git+https://github.com/heikkipora/gifencoder.git"
+  }
+}
