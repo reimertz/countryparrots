@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate-gifs": "rm -rf parrots/;mkdir parrots; node generateParrots.js",
-    "generate-index": "node generateIndex.js"
+    "generate-gifs": "rm parrots.zip;rm -rf parrots/;mkdir parrots; node generateParrots.js",
+    "optimize-gifs": "node optimizeGifs.js",
+    "generate-index": "node generateIndex.js",
+    "generate-zip": "node generateZip.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "archiver": "^1.0.0",
     "canvas": "^1.3.16",
-    "gifencoder": "git+https://github.com/heikkipora/gifencoder.git"
+    "gifencoder": "git+https://github.com/heikkipora/gifencoder.git",
+    "imageoptim-cli": "^1.14.8"
   }
 }

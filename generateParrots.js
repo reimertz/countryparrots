@@ -5,7 +5,6 @@ const GIFEncoder = require('gifencoder')
 const Canvas = require('canvas')
 const Image = Canvas.Image
 const countryColors = require('./data/countryColors.js').getAll()
-const exec  = require('child_process').exec;
 const CONFIG = {
   source:   './framePngs/',
   destination:   './parrots/',
@@ -20,6 +19,17 @@ const CONFIG = {
     '7.png',
     '8.png',
     '9.png',
+    '0.png',
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
+    '0.png',
   ],
   gifSize: {
     w: 35,
@@ -37,8 +47,8 @@ function renderParrot(colorObject, progress) {
 
   encoder.start()
   encoder.setRepeat(0)
-  encoder.setDelay(50)
-  encoder.setQuality(7)
+  encoder.setDelay(35)
+  encoder.setQuality(10)
   encoder.setTransparent('#FFFFFF');
 
   for(var colorIndex = 0; colorIndex < colors.length; colorIndex++) {
@@ -79,13 +89,8 @@ function renderParrot(colorObject, progress) {
   process.stdout.write("\r\x1b[K")
   process.stdout.write(`${progress} of ${countryColors.length} parrots generated [${colorObject.name}]`);
 }
+
 countryColors.map(renderParrot)
-
-process.stdout.write(`\nzippin' parrots..`);
-
-exec('zip -ur parrots parrots', function (error, stdout, stderr) {
-  if(error) return console.log(error);
-  console.log('\ndone!');
-});
+console.log('\ndone!');
 
 

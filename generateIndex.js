@@ -4,8 +4,10 @@ const fs = require('fs')
 const countryColors = require('./data/countryColors.js').getAll()
 
 let parrotsSpans = countryColors.map((countryObject) => {
-  let img = `<img src="/parrots/${countryObject.name.toLowerCase().replace(' ', '-')}-parrot.gif"/>`
-  let span = `<span>${img}${countryObject.name.toLowerCase().replace(' ', '-')}-parrot</span>`
+  let name = countryObject.name.toLowerCase().replace(' ', '-')
+  let src = `/parrots/${name}-parrot.gif`;
+  let img = `<img src="${src}"/>`
+  let span = `<span>${img}${name}</span>`
   return span
 }).join('')
 
