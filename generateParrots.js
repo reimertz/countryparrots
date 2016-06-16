@@ -22,7 +22,7 @@ const CONFIG = {
 
   ],
   gifSize: {
-    w: 30,
+    w: 35,
     h: 25
   }
 }
