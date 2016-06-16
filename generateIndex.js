@@ -7,7 +7,7 @@ let parrotsSpans = countryColors.map((countryObject) => {
   let name = countryObject.name.toLowerCase().replace(' ', '-')
   let src = `/parrots/${name}-parrot.gif`;
   let img = `<img src="${src}"/>`
-  let span = `<span>${img}${name}</span>`
+  let span = `<span>${img}${name}-parrot</span>`
   return span
 }).join('')
 
