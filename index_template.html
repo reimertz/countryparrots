@@ -3,9 +3,38 @@
 <head>
   <title>country parrots</title>
 <style>
+body {
+  margin-top: 50px;
+  font-family: monospace;
+}
+
+button {
+  border: none;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  transition: 200ms;
+  border: 1px solid transparent;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  border-color: black;
+}
+
+.api {
+  margin-top: 50px;
+}
+
 .parrots  {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,12 +45,32 @@
 .parrots span {
   display: flex;
   flex-direction: column;
-  margin: 20px 20px;
-  font-size: 20px;
+  margin: 10px;
+  font-size: 10px;
+  transition: 200ms;
+  opacity: 1;
+  cursor: pointer;
+}
+.enter .parrots span {
+  opacity: 0.2;
+}
+
+.parrots span:hover {
+  transform: scale(2);
+  opacity: 1;
+}
+
+.parrots span:hover {
+  transform: scale(2);
 }
 
 .parrots img {
   image-rendering: pixelated;
+}
+iframe {
+  width: 60px;
+  position: relative;
+  top: 6px;
 }
 </style>
 </head>
@@ -29,10 +78,15 @@
 <center>
   <h1>Country Parrots</h1>
   <h2>One parrot for each country</h2>
-  <h3><a href="http://github.com/reimertz/country-parrots">github</a> | made by <a href="http://twitter.com/reimertz">@reimertz</a></h3>
+  <h3><iframe src="https://ghbtns.com/github-btn.html?user=reimertz&repo=country-parrots&type=star&count=true" frameborder="0" scrolling="0" height="20px"></iframe> | made by <a href="http://twitter.com/reimertz">@reimertz</a></h3>
   <a href="/parrots.zip">
     <button>Download all parrots</button>
   </a>
+
+  <h2 class="api">API</h2>
+  <h3>http://counry-parrots.com/parrots/<span style="color:red">[country]</span>-parrot.gif</h3>
+
+
   <section class="parrots">
     {{parrots}}
   </section>
