@@ -2627,6 +2627,18 @@
     "percent": 0.05
   }]
 }, {
+  "name": "Puerto Rico",
+  "colors": [{
+    "hex": "#0049F3",
+    "percent": 33
+  }, {
+    "hex": "#FF0000",
+    "percent": 33
+  }, {
+    "hex": "#FFFFFF",
+    "percent": 33
+  }]
+}, {
   "name": "Qatar",
   "colors": [{
     "hex": "#8D1B3D",
