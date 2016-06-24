@@ -33,7 +33,7 @@ function renderParrot(colorObject, progress) {
   const {name, colors} = colorObject
 
   encoder.createReadStream()
-    .pipe(fs.createWriteStream(`${CONFIG.destination}${name.toLowerCase().replace(' ', '-')}-parrot.gif`))
+    .pipe(fs.createWriteStream(`${CONFIG.destination}${name.toLowerCase().split(' ').join('-')}-parrot.gif`))
 
   encoder.start()
   encoder.setRepeat(0)
@@ -77,7 +77,7 @@ function renderParrot(colorObject, progress) {
     })
   }
   process.stdout.write("\r\x1b[K")
-  process.stdout.write(`${progress} of ${countryColors.length} parrots generated [${colorObject.name}]`);
+  process.stdout.write(`${progress+1} of ${countryColors.length} parrots generated [${colorObject.name}]`);
 }
 
 countryColors.map(renderParrot)
