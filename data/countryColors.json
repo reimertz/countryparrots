@@ -1877,13 +1877,13 @@
   "name": "Lithuania",
   "colors": [{
     "hex": "#FDB913",
-    "percent": 33
+    "percent": 33.33
   }, {
     "hex": "#006A44",
-    "percent": 33
+    "percent": 33.33
   }, {
     "hex": "#C1272D",
-    "percent": 33
+    "percent": 33.34
   }]
 }, {
   "name": "Luxembourg",
