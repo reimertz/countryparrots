@@ -228,21 +228,5 @@ npm install imageoptim-cli -g
 
 ## generate parrots
 ```
-npm run-script generate-gifs
-```
-
-
-## optimize gifs
-```
-npm run-script optimize-gifs
-```
-
-## generate zip
-```
-npm run-script generate-zip
-```
-
-## build index.html
-```
-npm run-script generate-index
+npm run generate-parrots
 ```

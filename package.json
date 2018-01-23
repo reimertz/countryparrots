@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "generate-parrots": "npm run generate-gifs && npm run optimize-gifs && npm run generate-index && npm run generate-zip",
     "generate-gifs": "rm parrots.zip;rm -rf parrots/;mkdir parrots; node generateParrots.js",
     "optimize-gifs": "node optimizeGifs.js",
     "generate-index": "node generateIndex.js",
