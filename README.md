@@ -217,6 +217,10 @@ Country Parrots
 </p>
 
 ## Install
+### Prerequisites 
+
+First, [install node-canvas prerequisites](https://github.com/Automattic/node-canvas#installation)
+
 ```
 npm install
 npm install imageoptim-cli -g
@@ -224,7 +228,7 @@ npm install imageoptim-cli -g
 
 ## generate parrots
 ```
-npm run-script generate-parrots
+npm run-script generate-gifs
 ```
 
 

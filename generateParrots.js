@@ -41,7 +41,7 @@ function renderParrot(colorObject, progress) {
   encoder.setQuality(10)
   encoder.setTransparent('#FFFFFF');
 
-  for(var colorIndex = 0; colorIndex < colors.length; colorIndex++) {
+  for(var colorIndex = colors.length-1; colorIndex >= 0; colorIndex--) {
     CONFIG.gifFrames.map((frame, frameIndex) => {
       let frameCanvas = new Canvas(CONFIG.gifSize.w, CONFIG.gifSize.h)
       let frameCtx = frameCanvas.getContext('2d');
@@ -65,7 +65,7 @@ function renderParrot(colorObject, progress) {
 
       bufferCtx.globalAlpha = 1.2 - ((CONFIG.gifFrames.length - frameIndex) / CONFIG.gifFrames.length)
 
-      bufferCtx.fillStyle = (colors[colorIndex+1] || colors[0])
+      bufferCtx.fillStyle = (colors[colorIndex-1] || colors[colors.length-1])
       bufferCtx.fillRect(0,0,CONFIG.gifSize.w, CONFIG.gifSize.h)
 
       bufferCtx.drawImage(imgOutline,0,0)
